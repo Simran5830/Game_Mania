@@ -1,0 +1,89 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  font-family: fantasy;
+}
+.back{
+    background-image: url('back2.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    height: 100vh;
+    /* background-size: cover; */
+}
+.gameover{
+  width: 150vw;
+  height: 120%;
+  font-size: 7vh;
+  font-weight: bold;
+  position: absolute;
+left: 45%;
+top:10%;
+visibility: hidden;
+}
+.game{
+  width: 15vw;
+  height: 8vh;
+  position: absolute;
+  font-size: 30px;
+  font-weight: 1000;
+  right: 2%;
+  top: 3%;
+}
+.player{
+background-image: url(dino.png);
+background-size: cover;
+height:37vh;
+width: 25vw;
+background-size: 17vw 40vh;
+background-repeat: no-repeat;
+position: absolute;
+bottom:3%;
+left: 2%;
+}
+
+.ani{
+  animation-name:jump;
+animation-duration: 2s;
+animation-iteration-count: 1;
+}
+
+@keyframes jump{
+  0%{
+   bottom: 3%;
+  }
+  50%{
+   bottom: 55vh;
+  }
+  100%{
+  bottom: 3%;
+  }
+}
+
+.enemy{
+background-image: url(dragon.png);
+background-size:cover;
+height: 20vh;
+width: 15vw;
+background-size: 10vw 20vh;
+background-repeat: no-repeat;
+position: absolute;
+bottom: 3%;
+right: 2%;
+}
+
+.movelinear{
+  animation-name: move;
+animation-iteration-count: infinite;
+animation-duration: 2.5s;
+animation-timing-function: linear;
+}
+
+@keyframes move{
+  0%{
+left: 100vw;
+  }
+  100%{
+    left: -20vw;
+  }
+}
